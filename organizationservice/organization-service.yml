@@ -1,5 +1,3 @@
-example.property: I AM THE DEFAULT
-
 spring.jpa.generate-ddl : true
 spring.jpa.hibernate.ddl-auto: update
 spring.jpa.hibernate.naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
@@ -14,7 +12,7 @@ spring.datasource.validationQuery : SELECT 1
 spring.datasource.url : jdbc:postgresql://localhost:5432/ostock_dev?sslmode:disable
 
 spring.datasource.username : postgres
-spring.datasource.password : {cipher}a825ffbcc49876d271230e0838fa2a70afe07a6603503a754c68f8fb32e583e2
+spring.datasource.password : "{cipher}a825ffbcc49876d271230e0838fa2a70afe07a6603503a754c68f8fb32e583e2"
 
 eureka.instance.preferIpAddress : true
 eureka.client.registerWithEureka : true
