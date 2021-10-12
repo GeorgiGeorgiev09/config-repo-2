@@ -11,13 +11,13 @@ spring:
   database:
     driverClassName: org.postgresql.Driver
   datasource:
-    url: jdbc:postgresql://localhost:5432/ostock_dev?sslmode=disable
-    platform: postgres
+    url: "jdbc:postgresql://localhost:5432/ostock_dev?sslmode=disable"
+    platform: ""postgres""
     testWhileIdle: true
     validationQuery: SELECT 1
 
 
     username: postgres
-    password: {cipher}a825ffbcc49876d271230e0838fa2a70afe07a6603503a754c68f8fb32e583e2
+    password: "{cipher}a825ffbcc49876d271230e0838fa2a70afe07a6603503a754c68f8fb32e583e2"
 
 
