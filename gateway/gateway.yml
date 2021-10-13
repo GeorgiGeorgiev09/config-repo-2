@@ -8,3 +8,11 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://eurekaserver:8761/eureka/
+
+spring:
+  cloud:
+    gateway:
+      #Enables the gateway to create routes based on services registered with service discovery
+      discovery.locator:
+        enabled: true
+        lowerCaseServiceId: true
