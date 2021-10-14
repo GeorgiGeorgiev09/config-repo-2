@@ -37,3 +37,9 @@ management:
   endpoints:
     web.exposure.include: "*"
     enabled-by-default: true
+
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com: DEBUG
