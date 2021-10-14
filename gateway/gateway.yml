@@ -12,23 +12,24 @@ eureka:
 
 spring:
   cloud:
+    loadbalancer.ribbon.enabled: false
     gateway:
       #Enables the gateway to create routes based on services registered with service discovery
-      discovery.locator:
-        enabled: true
-        lowerCaseServiceId: true
+#      discovery.locator:
+#        enabled: true
+#        lowerCaseServiceId: true
 
       #Manual routes
       routes:
         #This optional ID is an arbitrary route ID
         - id: organization-service
         #Sets the route’s destination URI
-        uri: lb://organization-service
+          uri: lb://organization-service
         #The path, although set by the load() method, is just another option.
-        predicates:
+          predicates:
           - Path=/organization/**
         #Filters a collection of Spring web.filters to modify the request or response before or after sending the response
-        filters:
+          filters:
           #Rewrites the request path, from /organization/** to /**, by taking the path regexp as a parameter and a replacement order
           - RewritePath=/organization/(?<path>.*), /$\{path}
 
